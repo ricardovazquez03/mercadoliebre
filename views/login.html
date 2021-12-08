@@ -15,14 +15,26 @@
     <header>
       <div class="top-header">
         <div class="logo">
-          <a href=""
+          <a href="/"
             ><img class="header-img-logo" src="images/logo-mercado-liebre.svg" alt="MercadoLiebre"
           /></a>
         </div>
-        <div class="form" action="#" method="GET">
+        <form action="GET" class="form">
+          <input
+            type="text"
+            name="busqueda"
+            class="barraBusqueda"
+            placeholder="Buscar productos, marcas..."
+          />
+          <button type="submit">
+            <a href="#"><i class="fas fa-search"></i></a>
+          </button>
+        </form>
+
+        <!-- <div class="form" action="#" method="GET">
           <div class="input">Buscar productos, marcas y más</div>
           <div class="submit"><i class="fa fa-search"></i></div>
-        </div>
+        </div> -->
         <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
       </div>
       <nav class="nav-header">
@@ -48,7 +60,7 @@
         <i class="fa fa-bars burger"></i>
       </div>
     </header>
-    <main>
+    <main class="section-login">
       <form class="login" action="/" method="POST">
         <input
           class="input-text-login borde"
@@ -59,12 +71,14 @@
         />
         <input
           class="input-text-login borde"
+          id="campoContrasena"
           type="password"
           name="pass"
           placeholder="Elegí tu contraseña"
           required
+          min="10"
         />
-        <input class="boton-entrar boton-login" type="submit" value="Enviar" />
+        <input class="boton-entrar boton-login" type="submit" value="Enviar" onclick="validar(e)" />
       </form>
     </main>
     <footer>
@@ -97,4 +111,13 @@
       <p class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
   </body>
+  <script>
+    let campoContrasena = documentElementById("campoContrasena");
+    function validar(e) {
+      e.preventDefault();
+      if (campoContrasena.value === 0) {
+        alert("Este campo está vacío");
+      }
+    }
+  </script>
 </html>

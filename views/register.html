@@ -15,14 +15,26 @@
     <header>
       <div class="top-header">
         <div class="logo">
-          <a href=""
+          <a href="/"
             ><img class="header-img-logo" src="images/logo-mercado-liebre.svg" alt="MercadoLiebre"
           /></a>
         </div>
-        <div class="form" action="#" method="GET">
+        <form action="GET" class="form">
+          <input
+            type="text"
+            name="busqueda"
+            class="barraBusqueda"
+            placeholder="Buscar productos, marcas..."
+          />
+          <button type="submit">
+            <a href="#"><i class="fas fa-search"></i></a>
+          </button>
+        </form>
+
+        <!-- <div class="form" action="#" method="GET">
           <div class="input">Buscar productos, marcas y más</div>
           <div class="submit"><i class="fa fa-search"></i></div>
-        </div>
+        </div> -->
         <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
       </div>
       <nav class="nav-header">
@@ -98,6 +110,7 @@
           name="pass"
           placeholder="Elegí tu contraseña"
           required
+          id="campoContrasenaRegistro"
         />
 
         <input
@@ -106,9 +119,10 @@
           name="pass_confirm"
           placeholder="Confirmá tu contraseña"
           required
+          id="campoContrasenaRegistroComparacion"
         />
         <div class="boton-registro">
-          <input type="submit" value="Enviar" />
+          <input type="submit" value="Enviar" onclick="validar(e)" />
           <input type="reset" value="Borrar" />
         </div>
       </form>
@@ -143,4 +157,18 @@
       <p class="copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
   </body>
+  <script>
+    let campoContrasenaRegistro = documentElementById("campoContrasenaRegistro");
+    let campoContrasenaRegistroComparacion = documentElementById(
+      "campoContrasenaRegistroComparacion"
+    );
+    function validar(e) {
+      e.preventDefault();
+      if (campoContrasena.value === campoContrasenaRegistroComparacion) {
+        alert("Bienvenido registro realizado");
+      } else {
+        alert("La contraseña no coincide");
+      }
+    }
+  </script>
 </html>

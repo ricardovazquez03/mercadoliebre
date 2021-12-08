@@ -20,16 +20,13 @@ p {
 div.top-header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:center;
   align-items: center;
 }
 
 header div.top-header p {
-    max-width: 350px;
-  width: 90%;
-  margin: auto;
-  /*text-align: center;
-  margin-top: 5px;*/
+  margin: 10px 0px;
+  text-align: center;
 }
 
 header {
@@ -39,8 +36,7 @@ header {
 
 header div.logo,
 header .form {
-  width: 50%;
-  justify-content: center;
+  width:auto;
 }
 .header-img-logo {
   width: 100%;
@@ -54,6 +50,10 @@ header .form {
   align-items: center;
   padding: 2px;
   font-size: 11px;
+}
+.barraBusqueda {
+    width:100%;
+    margin: 5px 0px;
 }
 header nav {
   font-size: 12px;
@@ -201,6 +201,7 @@ article div.main-article {
 
 footer {
   background-color: #fff;
+  margin: 10px 0px;
 }
 .footer-seccion {
   font-size: 12px;
@@ -216,10 +217,10 @@ footer {
 .footer-section-contenedor {
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin: 15px 15px;
   justify-content: space-around;
   align-items: center;
-  margin: 0 15px;
+  /*margin: 0 15px;*/
 }
 .footer-titulo {
   font-size: 12px;
@@ -237,7 +238,6 @@ footer {
 /*View Register*/
 .register {
   width: 80vw;
-  /*overflow: hidden;*/
   display: flex;
 }
 .formulario-registro {
@@ -271,12 +271,12 @@ footer {
 }
 
 /*View Login*/
+
 .login {
   width: 90vw;
-  margin: 10px auto;
   display: flex;
 flex-direction: column;
-    margin:10px auto;
+    margin:180px auto;
     justify-content:space-between;
 }
 .input-text-login{
@@ -299,10 +299,6 @@ flex-direction: column;
   main section article .description {
     display: none;
   }
-
-  /*main section article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  }*/
 
   main section div.products {
     display: flex;
@@ -366,6 +362,7 @@ flex-direction: column;
     div.top-header {
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
     }
     .nav-header {
       width: 90%;
